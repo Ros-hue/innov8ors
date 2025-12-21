@@ -1,0 +1,82 @@
+
+@tailwind utilities;
+
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Add these styles to your globals.css */
+.testimonial-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.telegraph-content {
+  font-family: 'Telegraph', sans-serif;
+}
+.megrim-regular {
+  font-family: "Megrim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.iceland-regular {
+  font-family: "Iceland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Telegraph';
+  src: url('/fonts/telegraf/Telegraf UltraLight 200.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Global background: orange to gray gradient */
+html, body, #__next {
+  min-height: 100%;
+  background: linear-gradient(180deg, #f97316 0%, #9ca3af 100%);
+}
+
+/* Accessibility / compatibility fallbacks */
+html, body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Provide standard 'line-clamp' alongside webkit prefixed version for compatibility */
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* Fallbacks for color-mix generating rules: define common color variables so older browsers have stable values */
+:root {
+  --fallback-black: #000000;
+  --fallback-white: #ffffff;
+  --fallback-red-500: #ef4444;
+  --fallback-zinc-700: #3f3f46;
+}
+
+/* Example generic fallbacks used when color-mix isn't supported. These are conservative and won't affect modern browsers. */
+.bg-color-mix-fallback { background-color: var(--fallback-black); }
+.border-color-mix-fallback { border-color: rgba(0,0,0,0.25); }
+
+/* Grid background used on some pages (moved from inline styles) */
+.about-grid-bg {
+  background-image: linear-gradient(#dc2626 1px, transparent 1px), linear-gradient(90deg, #dc2626 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Map iframe style moved from inline */
+.map-iframe {
+  border: 0;
+}
