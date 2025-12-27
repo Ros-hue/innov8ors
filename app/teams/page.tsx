@@ -46,7 +46,7 @@ const teamMembers: TeamMember[] = [
       mail: "innov8ors.com" 
     }
   },
-  {
+  /*{
     id: "member-2",
     name: "Yuvraj Yadav",
     role: "Co-director",
@@ -58,11 +58,24 @@ const teamMembers: TeamMember[] = [
       instagram: "https://www.instagram.com/yuvraj.yadav31/",
       mail: "mitlo:roshanyy2017@gmail"
     }
-  },
+  },*/
   {
     id: "member-3",
     name: "Soibam Erica Chanu",
     role: "Co-Ordinator",
+    image: "/team/erica.jpeg",
+    bio: "Soibam Erica Chanu serves as the Coordinator of Innov8ors and plays a vital role in managing day-to-day activities and ensuring smooth coordination within the community. She acts as a bridge between the leadership team and members, supporting event planning, communication, and execution.",
+    skills: ["Community Lead","Growth Coordinator","Event Planner"],
+    social: {
+      linkedin: "https://www.linkedin.com/in/erica-soibam-6b0595382/",
+      instagram: "https://www.instagram.com/lun_essence__/",
+      mail: ""
+    }
+  },
+  {
+    id: "member-4",
+    name: "Nidhi Verma",
+    role: "",
     image: "/team/erica.jpeg",
     bio: "Soibam Erica Chanu serves as the Coordinator of Innov8ors and plays a vital role in managing day-to-day activities and ensuring smooth coordination within the community. She acts as a bridge between the leadership team and members, supporting event planning, communication, and execution.",
     skills: ["Community Lead","Growth Coordinator","Event Planner"],
