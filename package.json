@@ -2,6 +2,17 @@
   "name": "innov8ors-website",
   "version": "0.1.0",
   "private": true,
+  "browserslist": {
+    "production": [
+      "chrome >= 111",
+      "edge >= 111",
+      "firefox >= 111",
+      "safari >= 16.4"
+    ],
+    "development": [
+      "last 1 chrome version"
+    ]
+  },
   "scripts": {
   "dev": "next dev -H 0.0.0.0",
   "build": "next build",

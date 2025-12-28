@@ -3,7 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { LuMessageSquareMore } from "react-icons/lu";
 
 const Footer = () => {
   const handleEmailClick = (e) => {

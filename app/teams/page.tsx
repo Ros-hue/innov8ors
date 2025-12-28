@@ -46,7 +46,7 @@ const teamMembers: TeamMember[] = [
       mail: "innov8ors.com" 
     }
   },
-  /*{
+  {
     id: "member-2",
     name: "Yuvraj Yadav",
     role: "Co-director",
@@ -58,18 +58,18 @@ const teamMembers: TeamMember[] = [
       instagram: "https://www.instagram.com/yuvraj.yadav31/",
       mail: "mitlo:roshanyy2017@gmail"
     }
-  },*/
+  },
   {
     id: "member-3",
     name: "Soibam Erica Chanu",
     role: "Co-Ordinator",
     image: "/team/erica.jpeg",
     bio: "Soibam Erica Chanu serves as the Coordinator of Innov8ors and plays a vital role in managing day-to-day activities and ensuring smooth coordination within the community. She acts as a bridge between the leadership team and members, supporting event planning, communication, and execution.",
-    skills: ["Community Lead","Growth Coordinator","Event Planner"],
+    skills: ["","Growth Coordinator","Event Planner"],
     social: {
       linkedin: "https://www.linkedin.com/in/erica-soibam-6b0595382/",
       instagram: "https://www.instagram.com/lun_essence__/",
-      mail: ""
+      mail: "milto:soibamerica@gmail.com"
     }
   },
   {
@@ -82,15 +82,20 @@ const teamMembers: TeamMember[] = [
     social: {
       linkedin: "https://www.linkedin.com/in/nidhi-verma-725a79387/",
       instagram: "https://www.instagram.com/nidhi.verma_01/",
-      mail: ""
+      mail: "milto:nidhiverma20092006@gmail.com"
     }
   }
 ];
 
 const communityImages = [
-    { id: "img-1", src: "/team/Moulya.jpeg", name: "Moulya", role: "Community Member" },
-    { id: "img-2", src: "/team/shighdha.jpg", name: "Shighdha", role: "Designer" },
-    { id: "img-3", src: "/team/akash.jpg", name: "Akash", role: "Developer" },
+    { id: "img-1", src: "/team/Moulya.jpeg", name: "Moulya", role: "Dept of ECE Lead", social: { instagram: "https://www.instagram.com/moulya_raviprasad/", linkedin: "https://www.linkedin.com/in/moulya-r-a2a284383/" } },
+    { id: "img-2", src: "/team/shighdha.jpg", name: "Snigdha", role: "Dept of CSE Lead", social: { instagram: "https://www.instagram.com/__snigdha_0/", linkedin: "https://www.linkedin.com/in/snigdha-lohith-5b2547384/" } },
+    { id: "img-3", src: "/team/komal.jpeg", name: "Komal Sharma", role: "Technical Lead", social: { instagram: "https://www.instagram.com/k.sharma1410/", linkedin: "https://www.linkedin.com/in/komal-sharma-63b52a384/" } },
+    { id: "img-4", src: "/team/kriti.jpeg", name: "Kriti ", role: "Event Management Lead" ,social: { instagram: "", linkedin: "" }},
+    { id: "img-5", src: "/team/thirisha.jpeg", name: "Thirisha ", role: "Social Media Lead",social: { instagram: "https://www.instagram.com/thishi.sheesh/", linkedin: "https://www.linkedin.com/in/thirisharg/" } },
+    { id: "img-6", src: "/team/Akhil.jpg", name: "Akhil kasi j s ", role: "Dept of CSE Co-Lead" ,social: { instagram: "https://www.instagram.com/wyakhil/", linkedin: "https://www.linkedin.com/in/akhil-kasi-j-s-7aaba5383/" } },
+    { id: "img-7", src: "/team/sri.jpeg", name: "Srinivas ", role: "Dept of AIML Lead" ,social: { instagram: "https://www.instagram.com/srinivas__palagani?igsh=YmcwMjYxb2Ixa3Zh", linkedin: "https://www.linkedin.com/in/srinivas-palagani-6481ba379/" } },
+    
   ];
 
 const interns: Intern[] = [
@@ -231,9 +236,9 @@ export default function TeamPage() {
                 <div className="relative bg-gradient-to-b from-zinc-900/90 to-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-zinc-800/50 hover:border-red-500/50 transition-all duration-500">
                   <div className="h-1 bg-gradient-to-r from-red-600 via-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                   
-                  <div className="p-8">
+                  <div className="p-6 sm:p-8">
                     <div className="relative mb-6">
-                      <div className="relative w-28 h-28 mx-auto">
+                      <div className="relative w-20 h-20 sm:w-28 sm:h-28 mx-auto">
                         <motion.div
                           className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500/20 to-red-600/20 blur-md"
                           animate={{
@@ -249,7 +254,7 @@ export default function TeamPage() {
                           </div>
                         </div>
                         
-                        <div className="absolute bottom-1 right-1 w-7 h-7 bg-white/10 rounded-full flex items-center justify-center">
+                        <div className="absolute bottom-1 right-1 w-6 h-6 sm:w-7 sm:h-7 bg-white/10 rounded-full flex items-center justify-center">
                           <div className="w-5 h-5 bg-emerald-500 rounded-full border-2 border-black">
                             <motion.div
                               className="w-full h-full bg-emerald-400 rounded-full"
@@ -262,7 +267,7 @@ export default function TeamPage() {
                     </div>
 
                     <div className="text-center space-y-3">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
                         {member.name}
                       </h3>
                       <p className="text-red-500 font-medium text-sm uppercase tracking-widest">
@@ -385,9 +390,9 @@ export default function TeamPage() {
                 className="group relative h-full"
               >
                 <button onClick={() => setShowMoreCards(!showMoreCards)} className="w-full">
-                <div className="relative bg-gradient-to-b from-zinc-900/80 to-black/80 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/50 hover:border-red-500/40 transition-all duration-500 p-6 min-h-[280px]">
+                <div className="relative bg-gradient-to-b from-zinc-900/80 to-black/80 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800/50 hover:border-red-500/40 transition-all duration-500 p-4 sm:p-6 min-h-[220px] sm:min-h-[280px]">
                   <div className="relative mb-4">
-                    <div className="relative w-24 h-24 mx-auto">
+                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 mx-auto">
                       <motion.div
                         className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500/10 to-red-600/10 blur-sm"
                         animate={{
@@ -399,14 +404,14 @@ export default function TeamPage() {
                       
                       <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-zinc-700 group-hover:border-red-500/50 transition-all duration-500">
                         <div className="w-full h-full bg-gradient-to-br from-zinc-700 to-zinc-800 flex items-center justify-center">
-                        <Image src={intern.image} alt={intern.name} width={96} height={96} className="object-contain w-full h-full p-2" />
+                        <Image src={intern.image} alt={intern.name} width={96} height={96} className="object-cover w-full h-full" />
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="text-center space-y-2">
-                    <h3 className="text-base font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                    <div className="text-center space-y-2">
+                    <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-red-400 transition-colors duration-300">
                       {intern.name}
                     </h3>
                     <p className="text-red-500/90 font-medium text-xs tracking-wide">
@@ -447,34 +452,58 @@ export default function TeamPage() {
           </div>
           {showMoreCards && (
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {communityImages.map((image, index) => (
-                <motion.div
-                  key={image.id}
-                  initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative rounded-xl overflow-hidden border border-zinc-800/50 hover:border-red-500/50 h-64 bg-zinc-900"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.name || `Community image ${index + 1}`}
-                    width={400}
-                    height={400}
-                    className="object-contain w-full h-full transform group-hover:scale-105 transition-transform duration-300"
-                  />
+              {communityImages.map((image, index) => {
+                return (
+                  <motion.div
+                    key={image.id}
+                    initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group relative rounded-xl overflow-hidden border border-zinc-800/50 hover:border-red-500/50 h-48 sm:h-56 lg:h-64 bg-zinc-900"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.name || `Community image ${index + 1}`}
+                      width={400}
+                      height={400}
+                      className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                    />
 
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-black/30 md:group-hover:bg-black/40 transition-all duration-300 pointer-events-none"></div>
 
-                  <div className="absolute inset-0 flex items-end justify-center p-4 pointer-events-none">
-                    <div className="opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-auto">
-                      <div className="bg-black/60 text-white px-3 py-2 rounded-md text-center">
-                        <p className="font-semibold text-sm">{image.name}</p>
-                        <p className="text-xs text-red-400 mt-1">{image.role}</p>
+                    <div className="absolute inset-0 flex items-end justify-center p-4">
+                      <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 transform md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300 pointer-events-auto">
+                        <div className="bg-black/70 text-white px-3 py-2 rounded-md text-center">
+                          <p className="font-semibold text-sm">{image.name}</p>
+                          <p className="text-xs text-red-400 mt-1">{image.role}</p>
+
+                          <div className="flex items-center justify-center gap-3 mt-2">
+                            {image.social?.linkedin ? (
+                              <Link href={image.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-zinc-800/70 hover:bg-blue-600 rounded-full flex items-center justify-center text-white">
+                                <FaLinkedin className="w-4 h-4" />
+                              </Link>
+                            ) : (
+                              <div className="w-8 h-8 bg-zinc-800/40 rounded-full flex items-center justify-center text-zinc-400">
+                                <FaLinkedin className="w-4 h-4" />
+                              </div>
+                            )}
+
+                            {image.social?.instagram ? (
+                              <Link href={image.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-zinc-800/70 hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 rounded-full flex items-center justify-center text-white">
+                                <FaInstagram className="w-4 h-4" />
+                              </Link>
+                            ) : (
+                              <div className="w-8 h-8 bg-zinc-800/40 rounded-full flex items-center justify-center text-zinc-400">
+                                <FaInstagram className="w-4 h-4" />
+                              </div>
+                            )}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </div>
           )}
         </div>

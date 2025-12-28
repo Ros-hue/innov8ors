@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from 'next/image';
 import Navbar from "../components/Navbar";
 
 export const metadata = {
@@ -45,12 +46,13 @@ export default function AchievementsPage() {
                 key={idx}
                 className="relative rounded-2xl overflow-hidden shadow-lg bg-white/80 backdrop-blur-sm border border-zinc-200 hover:scale-[1.02] transition-transform duration-300"
               >
-                <div className="h-56 w-full overflow-hidden bg-zinc-100">
-                  <img
+                <div className="h-56 w-full overflow-hidden bg-zinc-100 relative">
+                  <Image
                     src={it.src}
                     alt={it.title}
-                    className="object-cover w-full h-full"
-                    loading="lazy"
+                    className="object-cover"
+                    fill={true}
+                    sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
 

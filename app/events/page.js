@@ -2,49 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
-import { FaExclamationTriangle } from 'react-icons/fa';
-import EventCard from './EventCard';
-import InternCard from './InternCard';
-
-const teamMembers = [
-  {
-    id: "intern-1",
-    name: "Workshop-1",
-    designation: "EKYA School",
-    date: "5TH DEC 2025",
-    video: "/images/workshop1.mp4",
-            social: {
-            linkedin: "#",
-            instagram: "#",
-        },
-  },
-  {
-    id: "intern-3",
-    name: "Workshop-3",
-    designation: "Alliance University",
-    date: "12TH DEC 2025",
-    video: "/images/WORKSHOP-3.mp4",
-            social: {
-            linkedin: "#",
-            instagram: "#",
-        }
-  }, {
-    id: "intern-4",
-    name: "Workshop-4",
-    designation: "Venue- Choss Chambridge institute of Technology",
-    date: "14TH DEC 2025",
-    video: "/images/workshop4.mp4",
-            social: {
-            linkedin: "#",
-            instagram: "#",
-        }
-  }, 
-];
+import TextPressure from '../components/TextPressure';
 
 export default function Events() {
     const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
     const [mounted, setMounted] = useState(false);
-    const [showScarcityToast, setShowScarcityToast] = useState(true);
 
     useEffect(() => {
         setMounted(true);
@@ -117,77 +79,85 @@ export default function Events() {
                     ))}
                 </div>
             </div>
-             {/* Header Section */}
-                    <motion.div
-                        className="text-center mb-16"
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                           Our Main{" "}
-                          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
-                            Event
-                          </span>
-                        </h2>
-                        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-                          Check out our flagship workshop event.
-                        </p>
-                    </motion.div>
 
             {/* Main Content */}
             <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6">
-                <div className="text-center max-w-7xl mx-auto">
-                    {/* Workshop Event Card */}
-                    <EventCard />
-
-                    {/* Interns Section */}
-                    <motion.div
-                        className="text-center mb-16"
-                        initial={{ y: 50, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.8 }}
+                <div className="text-center max-w-4xl mx-auto">
+                    
+                    {/* Robot/Gear Icon */}
+                    <motion.div 
+                        className="mb-8"
+                        initial={{ scale: 0, rotate: -180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
                     >
-                    <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                        Our{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
-                            Event
-                        </span>
-                    </h2>
+                        <div className="relative w-32 h-32 mx-auto">
+                            <motion.div 
+                                className="w-full h-full border-4 border-red-500 rounded-full flex items-center justify-center"
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                            >
+                                <svg className="w-16 h-16 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                                </svg>
+                            </motion.div>
+                            
+                            {/* Orbiting dots */}
+                            <motion.div 
+                                className="absolute top-0 left-1/2 w-2 h-2 bg-red-400 rounded-full -translate-x-1/2"
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                                style={{ transformOrigin: '50% 64px' }}
+                            />
+                            <motion.div 
+                                className="absolute bottom-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full -translate-x-1/2"
+                                animate={{ rotate: -360 }}
+                                transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
+                                style={{ transformOrigin: '50% -64px' }}
+                            />
+                        </div>
                     </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-stretch">
-            {teamMembers.map((intern, index) => (
-              <InternCard key={intern.id} intern={intern} index={index} />
-            ))}
-          </div>
+                    {/* Main Heading */}
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.5 }}
+                    >
+                        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+                            <TextPressure
+                                text="WE ARE"
+                                flex={true}
+                                alpha={false}
+                                stroke={false}
+                                width={true}
+                                weight={true}
+                                italic={true}
+                                textColor="#ffffff"
+                                strokeColor="#ff0000"
+                                minFontSize={36}
+                            />
+                            <TextPressure
+                                text="COMING SOON"
+                                flex={true}
+                                alpha={false}
+                                stroke={false}
+                                width={true}
+                                weight={true}
+                                italic={true}
+                                textColor="red"
+                                strokeColor="#ff0000"
+                                minFontSize={36}
+                            />
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-400 mb-4">
+                            Something Amazing is Being Built
+                        </p>
+                        <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                             Innov8ors is preparing to launch exciting events and activities designed to encourage learning, innovation, and collaboration. Stay tuned for updates on our upcoming events and opportunities.
+                        </p>
+                    </motion.div>
 
-
-                    {/* Scarcity Toast Notification */}
-                    {showScarcityToast && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            className="fixed bottom-4 right-4 bg-yellow-600 text-black px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50"
-                        >
-                            <FaExclamationTriangle className="w-5 h-5" />
-                            <span className="font-semibold">Only 5 tickets left!</span>
-                            <span className="text-sm">Sales end in 4 hours</span>
-                            <button
-                                onClick={() => setShowScarcityToast(false)}
-                                className="ml-2 text-black hover:text-gray-800"
-                            >
-                                ×
-                            </button>
-                        </motion.div>
-                    )}
-
-                    {/* Live Indicator for Virtual Event */}
-                    <div className="fixed top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full flex items-center gap-2 z-50">
-                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold">LIVE</span>
-                    </div>
                 </div>
             </div>
         </div>

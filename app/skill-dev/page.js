@@ -154,8 +154,7 @@ export default function Events() {
                             Something Amazing is Being Built
                         </p>
                         <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                             Our events section is under construction. Get ready for exciting robotics workshops, 
-                            AI seminars, drone racing competitions, and much more!
+                             Innov8ors is committed to skill development by providing students with opportunities to learn practical skills, improve problem-solving abilities, and gain real-world experience through upcoming events, activities, and collaborative initiatives
                         </p>
                     </motion.div>
 

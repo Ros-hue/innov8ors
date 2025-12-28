@@ -1,5 +1,6 @@
 // Component ported from https://codepen.io/JuanFuentes/full/rgXKGQ
 
+'use client';
 import { useEffect, useRef, useState } from 'react';
 
 const TextPressure = ({
